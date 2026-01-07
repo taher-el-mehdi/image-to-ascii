@@ -2,6 +2,9 @@
 
 Converts images into ASCII art. Upload an image, tweak the cell size and contrast controls, and copy or download the generated ASCII text.
 
+Live demo: [Image To ASCII Art Converter](https://taher-el-mehdi.github.io/image-to-ascii/)
+![ascii](./ascii.png)
+
 ## Usage
 1. Upload an image using the Upload button.
 2. Tune controls in the sidebar:
