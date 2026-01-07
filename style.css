@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #0b0c10;
+    color: #e6e6e6;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    min-height: 100vh;
+}
+
+.app {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.app-header h1 {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    margin-bottom: 16px;
+}
+
+.upload {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.file-label .btn {
+    background: #1f2833;
+    border: 1px solid #3a4a5a;
+    color: #e6e6e6;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.file-name {
+    opacity: 0.8;
+}
+
+.workspace {
+    display: grid;
+    grid-template-columns: 1fr 320px;
+    gap: 16px;
+}
+
+.canvas-wrap {
+    background: #0f1115;
+    border: 1px solid #222831;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+}
+
+#canvas1 {
+    width: 100%;
+    height: auto;
+    image-rendering: pixelated;
+}
+
+.sidebar {
+    background: #0f1115;
+    border: 1px solid #222831;
+    border-radius: 12px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.control {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 6px;
+}
+
+.control input[type="range"] {
+    width: 100%;
+}
+
+.toggles {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    background: #1f2833;
+    border: 1px solid #3a4a5a;
+    color: #e6e6e6;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: #263241;
+}
+
+.btn-secondary {
+    background: transparent;
+}
+
+.text-panel {
+    margin-top: 16px;
+    background: #0f1115;
+    border: 1px solid #222831;
+    border-radius: 12px;
+    padding: 12px;
+}
+
+#asciiText {
+    max-height: 360px;
+    overflow: auto;
+    white-space: pre;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+    font-size: 10px;
+    line-height: 1;
+}
+
+@media (max-width: 960px) {
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+}

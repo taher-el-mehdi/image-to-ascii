@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ASCII Art Generator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="app">
+        <header class="app-header">
+            <h1>ASCII Art Generator</h1>
+        </header>
+
+        <section class="upload">
+            <label class="file-label" id="fileLabel">
+                <input type="file" id="image-file" accept="image/*" hidden>
+                <span class="btn">Upload Image</span>
+            </label>
+            <span id="fileName" class="file-name">No file selected</span>
+        </section>
+
+        <section class="workspace">
+            <div class="canvas-wrap">
+                <canvas id="canvas1"></canvas>
+            </div>
+            <aside class="sidebar">
+                <div class="control">
+                    <label for="resolution" id="resolutionLabel">Cell Size: 5px</label>
+                    <input type="range" id="resolution" name="resolution" min="2" max="20" value="5">
+                </div>
+                <div class="control">
+                    <label for="brightness" id="brightnessLabel">Brightness: 0</label>
+                    <input type="range" id="brightness" min="-128" max="128" value="0">
+                </div>
+                <div class="control">
+                    <label for="contrast" id="contrastLabel">Contrast: 1.0</label>
+                    <input type="range" id="contrast" min="0.5" max="2" step="0.1" value="1">
+                </div>
+                <div class="control toggles">
+                    <label><input type="checkbox" id="invert"> Invert</label>
+                    <label><input type="checkbox" id="mono" checked> Monochrome</label>
+                </div>
+                <div class="buttons">
+                    <button id="copyBtn" class="btn">Copy Text</button>
+                    <button id="downloadBtn" class="btn">Download .txt</button>
+                    <button id="clearBtn" class="btn btn-secondary">Clear</button>
+                </div>
+            </aside>
+        </section>
+
+        <details class="text-panel">
+            <summary>ASCII Text Preview</summary>
+            <pre id="asciiText"></pre>
+        </details>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
